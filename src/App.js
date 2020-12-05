@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import TextRatation from './text-rotation/index'
 
-function App() {
+function App (props) {
+
+  props = {
+    textList: [
+      '这是第一段文字',
+      '这是第二段文字',
+      '这是第三段文字'
+    ]
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TextRatation textList={props.textList} />
+    </>
   );
 }
 
